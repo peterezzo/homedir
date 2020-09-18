@@ -1,0 +1,15 @@
+# hide all by default
+*
+
+# basedir files 
+!.bash_aliases
+!.gitconfig
+!.gitignore
+!.vimrc
+
+# subdirectories
+!bin
+!bin/*
+!.ssh
+!.ssh/authorized_keys
+!.ssh/config
