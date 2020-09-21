@@ -6,6 +6,7 @@
 !.gitconfig
 !.gitignore
 !.vimrc
+!README.md
 
 # subdirectories
 !bin
