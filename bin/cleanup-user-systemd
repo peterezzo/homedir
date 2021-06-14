@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# systemd stuff
+echo Masking systemd user session
+ACTIONS="stop mask"
+SERVICES=\
+"tracker-miner-fs.service "\
+"gvfs-goa-volume-monitor.service "\
+"gvfs-gphoto2-volume-monitor.service "\
+"gvfs-metadata.service "\
+"gvfs-mtp-volume-monitor.service "\
+"gvfs-udisks2-volume-monitor.service "\
+"gvfs-daemon.service "\
+"pipewire.service "\
+"pulseaudio.service"
+
+for ACTION in $ACTIONS
+do
+    for SERVICE in $SERVICES
+    do
+        systemctl --user $ACTION $SERVICE
+    done
+done
+
+# dbus stuff
+echo Preventing dbus session startup
+SRC=/usr/share/dbus-1/services/
+DEST=~/.local/share/dbus-1/services/
+FILES=\
+"org.gnome.Identity.service "\
+"org.gnome.OnlineAccounts.service "\
+"org.gtk.vfs.AfcVolumeMonitor.service "\
+"org.gtk.vfs.Daemon.service "\
+"org.gtk.vfs.GoaVolumeMonitor.service "\
+"org.gtk.vfs.GPhoto2VolumeMonitor.service "\
+"org.gtk.vfs.Metadata.service "\
+"org.gtk.vfs.MTPVolumeMonitor.service "\
+"org.gtk.vfs.UDisks2VolumeMonitor.service"
+
+mkdir -p $DEST
+for FILE in $FILES
+do
+    cp $SRC$FILE $DEST
+    sed -i 's|Exec=.*|Exec=/bin/false|' $DEST$FILE
+done
+
+echo You may wish to killall -u $USER -9
