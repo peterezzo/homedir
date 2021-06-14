@@ -6,6 +6,7 @@ ACTIONS="stop mask"
 SERVICES=\
 "tracker-miner-fs.service "\
 "gvfs-goa-volume-monitor.service "\
+"gvfs-afc-volume-monitor.service "\
 "gvfs-gphoto2-volume-monitor.service "\
 "gvfs-metadata.service "\
 "gvfs-mtp-volume-monitor.service "\
