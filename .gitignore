@@ -6,6 +6,7 @@
 !.gitconfig
 !.gitignore
 !.vimrc
+!.tmux.conf
 !README.md
 
 # subdirectories
