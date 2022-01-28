@@ -18,7 +18,7 @@ umask 0022
 export TZ="Etc/UTC"
 
 # do path
-export PATH=~/bin:$PATH
+export PATH=~/bin:~/.local/bin:$PATH
 
 # prompt from kali EVERYWHERE but also with the date
 prompt_color='\[\033[;32m\]'
