@@ -1,0 +1,15 @@
+# this for ls?
+export QUOTING_STYLE=literal
+
+# umask 0002 is insanity
+umask 0022
+
+# so is non-UTC time
+export TZ="Etc/UTC"
+
+# do path
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH

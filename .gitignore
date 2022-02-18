@@ -10,6 +10,8 @@
 !README.md
 
 # subdirectories
+!.bashrc.d
+!.bashrc.d/*
 !bin
 !bin/*
 !.ssh
