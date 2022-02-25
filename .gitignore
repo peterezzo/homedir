@@ -12,6 +12,12 @@
 # subdirectories
 !.bashrc.d
 !.bashrc.d/*
+!.config
+!.config/environment.d
+!.config/systemd
+!.config/systemd/user
+!.config/environment.d/*
+!.config/system/user/*
 !bin
 !bin/*
 !.ssh
