@@ -17,7 +17,7 @@
 !.config/systemd
 !.config/systemd/user
 !.config/environment.d/*
-!.config/system/user/*
+!.config/systemd/user/*
 !bin
 !bin/*
 !.ssh
