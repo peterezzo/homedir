@@ -1,6 +1,5 @@
-[user]
-    name = Pete Ezzo
-    email = peter.ezzo@gmail.com
+[include]
+    path = ~/.gitconfig-local
 [color]
     ui = auto
 [core]
