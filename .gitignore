@@ -20,6 +20,7 @@
 !.config/systemd/user/*
 !bin
 !.local
+!.local/com.googlecode.iterm2.plist
 !.local/bin
 !.local/bin/*
 !.ssh
