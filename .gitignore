@@ -19,7 +19,9 @@
 !.config/environment.d/*
 !.config/systemd/user/*
 !bin
-!bin/*
+!.local
+!.local/bin
+!.local/bin/*
 !.ssh
 !.ssh/authorized_keys
 !.ssh/config
