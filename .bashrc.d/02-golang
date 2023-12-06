@@ -1,0 +1,6 @@
+# do path
+if ! [[ "$PATH" =~ "$HOME/go/bin:" ]]
+then
+    PATH="$HOME/go/bin:$PATH"
+fi
+export PATH
